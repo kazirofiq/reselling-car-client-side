@@ -1,0 +1,158 @@
+[
+    {
+        
+        "service_id": "04",
+        "title": "Grilled Chicken Breast",
+        "img": "http://fitmeal.like-themes.com/wp-content/uploads/2018/02/dish_08-1-360x360.jpg",
+        "price": "20.00",
+        "description": "Say goodbye to dry, bland grilled chicken breasts. This recipe guarantees juicy, flavorful chicken every time.Sometimes in cooking the simplest dishes are the hardest to get right, and grilled chicken is a perfect example. Because boneless chicken breasts are so lean, they often turn out dry, rubbery, and bland. Contrary to popular belief, marinating alone will not prevent grilled chicken from drying out; in fact, it’s often the marinade that causes the problem!",
+        "facility": [
+            {
+                "name": "Instant Food Services",
+                "details": " Find the best meal kit delivery services providing you with fresh ingredients and healthier, more convenient eating from Fitmeat"
+            },
+            {
+                "name": "24/7 Quality Service",
+                "details": "Our Food  delivering good customer service."
+            },
+            {
+                "name": "Easy Customer Service",
+                "details": "Our Service is very use full everyone "
+            },
+            {
+                "name": "Quality Cost Service",
+                "details": "Quality, Cost, Service, and Delivery: The managed flow of goods and information from raw material."
+            }
+        ]
+    },
+    {
+        
+        "service_id": "05",
+        "title": "Salad with Mozarella",
+        "img": "http://fitmeal.like-themes.com/wp-content/uploads/2018/02/dish_03-1-360x360.jpg",
+        "price": "20.00",
+        "description": "Tomato mozzarella salad with lettuce is tossed with a simple balsamic, olive oil and herb dressing. This salad is delicious, healthy and super refreshing.Tomato mozzarella salad is the perfect dish for your summer BBQ! Use the freshest produce you can get your hands on to make it. Do you love Caprese salad? Think of this as a Caprese with lettuce. Whether you serve it as a side or top it with some protein to make it a meal on its own, this salad will soon “crunch” it’s way into your heart. A while back my husband and I decided that we were going to start taking salads to work for lunch. After trying out a bunch of different combinations, we landed on this delicious Greek-inspired salad.  ",
+        "facility": [
+            {
+                "name": "Instant Food Services",
+                "details": " Find the best meal kit delivery services providing you with fresh ingredients and healthier, more convenient eating from Fitmeat"
+            },
+            {
+                "name": "24/7 Quality Service",
+                "details": "Our Food  delivering good customer service."
+            },
+            {
+                "name": "Easy Customer Service",
+                "details": "Our Service is very use full everyone "
+            },
+            {
+                "name": "Quality Cost Service",
+                "details": "Quality, Cost, Service, and Delivery: The managed flow of goods and information from raw material."
+            }
+        ]
+    },
+    {
+        
+        "service_id": "01",
+        "title": "Chicken with Vegetables",
+        "img": "http://fitmeal.like-themes.com/wp-content/uploads/2018/02/dish_07-1-360x360.jpg",
+        "price": "200.00",
+        "description": "ealthy Chicken and Vegetable Skillet – This one-pot chicken recipe with vegetables takes 20 minutes to make and will wow your family with its amazing flavor! It’s super easy to make and a great way to use up all those summer veggies you may have in the fridge. This chicken recipe with veggies makes a great low-carb meal and is also excellent for meal prep. Enjoy!",
+        "facility": [
+            {
+                "name": "Instant Food Services",
+                "details": " Find the best meal kit delivery services providing you with fresh ingredients and healthier, more convenient eating from Fitmeat"
+            },
+            {
+                "name": "24/7 Quality Service",
+                "details": "Our Food  delivering good customer service."
+            },
+            {
+                "name": "Easy Customer Service",
+                "details": "Our Service is very use full everyone "
+            },
+            {
+                "name": "Quality Cost Service",
+                "details": "Quality, Cost, Service, and Delivery: The managed flow of goods and information from raw material."
+            }
+        ]
+    },
+    {
+        
+        "service_id": "02",
+        "title": "Red beetroot soup",
+        "img": "http://fitmeal.like-themes.com/wp-content/uploads/2018/02/dish_04-1.jpg",
+        "price": "150.00",
+        "description": "Beet soup isn’t just delicious, it’s also jam packed with nutrients. A mix of beets, parsnip, ginger, onion and garlic, this blended version is creamy, savory, and rich in flavor. Top it off with a swirl of coconut cream (or yogurt), parsley, and black sesame seeds.",
+        "facility": [
+            {
+                "name": "Instant Food Services",
+                "details": " Find the best meal kit delivery services providing you with fresh ingredients and healthier, more convenient eating from Fitmeat"
+            },
+            {
+                "name": "24/7 Quality Service",
+                "details": "Our Food  delivering good customer service."
+            },
+            {
+                "name": "Easy Customer Service",
+                "details": "Our Service is very use full everyone "
+            },
+            {
+                "name": "Quality Cost Service",
+                "details": "Quality, Cost, Service, and Delivery: The managed flow of goods and information from raw material."
+            }
+        ]
+    },
+    {
+        
+        "service_id": "03",
+        "title": "Steaks with Asparagus",
+        "img": "http://fitmeal.like-themes.com/wp-content/uploads/2018/02/dish_05-1.jpg",
+        "price": "30.00",
+        "description": "This is an elegant winter meal that comes together surprisingly quickly. I feel like it needs to be made while wearing a cashmere scarf and lots of diamonds. If only I owned a cashmere scarf and lots of diamonds :-). There are a couple minutes of prep work, but this is all going to cook lightning fast because the oven and the stove are going to be lightning hot. Perfect for a cozy evening when you want to eat something special without being stuck in the kitchen all night. Light a fragrant candle and get together your ingredients:",
+        "facility": [
+            {
+                "name": "Instant Food Services",
+                "details": " Find the best meal kit delivery services providing you with fresh ingredients and healthier, more convenient eating from Fitmeat"
+            },
+            {
+                "name": "24/7 Quality Service",
+                "details": "Our Food  delivering good customer service."
+            },
+            {
+                "name": "Easy Customer Service",
+                "details": "Our Service is very use full everyone "
+            },
+            {
+                "name": "Quality Cost Service",
+                "details": "Quality, Cost, Service, and Delivery: The managed flow of goods and information from raw material."
+            }
+        ]
+    },
+    {
+        
+        "service_id": "06",
+        "title": "Tender rabbit soup",
+        "img": "http://fitmeal.like-themes.com/wp-content/uploads/2018/02/dish_06-1-360x360.jpg",
+        "price": "20.00",
+        "description": "Rabbit meat has been around for centuries in cuisines around the world, from Moroccan tagines to European soups and stews. Deliciously sweet with a flavorful, slightly gamey character, rabbit has been a staple in traditional cuisines because hunters could easily catch them during the warm months of the year. A great meat to braise or roast, rabbit meat needs a good amount of liquid to retain moisture, so a stew is also the the perfect way to cook this protein. When it's cooked slowly, as this recipe does, you'll sit down to a tender, juicy, and delicious meal.",
+        "facility": [
+            {
+                "name": "Instant Food Services",
+                "details": " Find the best meal kit delivery services providing you with fresh ingredients and healthier, more convenient eating from Fitmeat"
+            },
+            {
+                "name": "24/7 Quality Service",
+                "details": "Our Food  delivering good customer service."
+            },
+            {
+                "name": "Easy Customer Service",
+                "details": "Our Service is very use full everyone "
+            },
+            {
+                "name": "Quality Cost Service",
+                "details": "Quality, Cost, Service, and Delivery: The managed flow of goods and information from raw material."
+            }
+        ]
+    }
+]
