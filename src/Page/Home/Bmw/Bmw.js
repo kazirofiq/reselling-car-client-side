@@ -10,7 +10,7 @@ const Bmw = () => {
     }, [])
     return (
         <div>
-            <h2>BMW</h2>
+            
             <div className='text-center'>
             <p className='text-lime-700 font-bold'>Our menu</p>
             <h2 className='text-5xl font-bold'> Reselling BMW Car</h2>

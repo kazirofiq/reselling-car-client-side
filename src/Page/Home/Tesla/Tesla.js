@@ -10,7 +10,7 @@ const Tesla = () => {
     }, [])
     return (
         <div>
-            <h1>Tesla</h1>
+            
             <div className='text-center'>
             <p className='text-lime-700 font-bold'>Our menu</p>
             <h2 className='text-5xl font-bold'>Reselling Tesla Cars</h2>

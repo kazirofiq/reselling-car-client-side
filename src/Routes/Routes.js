@@ -1,7 +1,10 @@
 import { createBrowserRouter, Link } from "react-router-dom";
 import Main from "../layout/Main";
 import Blog from "../Page/Blog/Blog";
+import Bmw from "../Page/Home/Bmw/Bmw";
 import Home from "../Page/Home/Home";
+import Tesla from "../Page/Home/Tesla/Tesla";
+import Toyota from "../Page/Home/Toyota/Toyota";
 import Login from "../Page/Login/Login";
 import SignUp from "../Page/SignUp/SignUp";
 
@@ -29,6 +32,18 @@ export const router = createBrowserRouter([
         {
             path: '/blog',
             element: <Blog></Blog>
+        },
+        {
+            path: '/toyota',
+            element: <Toyota></Toyota>
+        },
+        {
+            path: '/tesla',
+            element: <Tesla></Tesla>
+        },
+        {
+            path: '/bmw',
+            element: <Bmw></Bmw>
         },
       ]
     },
