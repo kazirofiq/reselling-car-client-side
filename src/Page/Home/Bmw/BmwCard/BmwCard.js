@@ -1,15 +1,21 @@
 import React from 'react';
 
-const BmwCard = () => {
+const BmwCard = ({bmwCar}) => {
+    const {_id, img, resellPrice, title, description, originalPrice, location, used, time} = bmwCar;
     return (
         <div>
             <div className="card w-96 bg-base-100 shadow-xl">
             <figure className="px-10 pt-10">
-                <img src="https://placeimg.com/400/225/arch" alt="Shoes" className="rounded-xl" />
+                <img src={img} alt="Shoes" className="rounded-xl" />
             </figure>
             <div className="card-body items-center text-center">
-                <h2 className="card-title">Shoes!</h2>
-                <p>If a dog chews shoes whose shoes does he choose?</p>
+                <h2 className="card-title">{title}</h2>
+                <p>{used}</p>
+                <p className='text-3xl'>Location: {location}</p>
+                <p>Resell Price: {resellPrice}</p>
+                <p>Original Price: {originalPrice}</p>
+                <p>{time}</p>
+                <p>{description}</p>
                 <div className="card-actions">
                 <button className="btn btn-primary">Buy Now</button>
                 </div>

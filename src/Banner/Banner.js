@@ -1,10 +1,11 @@
 import React from 'react';
-import img1 from '../assets/banner/1.jpeg';
-import img2 from '../assets/banner/2.jpeg';
-import img3 from '../assets/banner/3.jpeg';
-import img4 from '../assets/banner/4.jpeg';
-import img5 from '../assets/banner/5.jpeg';
-import img6 from '../assets/banner/6.jpeg';
+import img1 from '../assets/banner/1.png';
+import img2 from '../assets/banner/2.png';
+import img3 from '../assets/banner/3.png';
+import img4 from '../assets/banner//4.png';
+import img5 from '../assets/banner/5.png';
+import img6 from '../assets/banner/6.png';
+
 
 import BannerItem from './BannerItem/BannerItem';
 

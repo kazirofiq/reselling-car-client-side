@@ -8,15 +8,16 @@ const BannerItem = ({slide}) => {
                 <div className='carousel-img'>
                     <img src={image} alt="" className="w-full  rounded-xl" />
                 </div>
-                <div className="absolute flex justify-end transform -translate-y-1/2 left-24 top-1/4">
+                <div className="absolute  transform -translate-y-1/2 left-24 top-1/4">
                     <h1 className='text-6xl font-bold text-white'>
-                    Organic Food <br />
-                    Delivery Service 
+                    Find your next car with us
   
                     </h1>
+                    <br />
+                    <p className='text-xl text-white'>Leading online automotive marketplace in Bangladesh</p>
                 </div>
                 <div className="absolute flex justify-end transform -translate-y-1/2 w-2/5 left-24 top-1/2">
-                    <p className='text-xl text-white'>More and more people are catching on to the health benefits of organic food and, as such, it's becoming more accessible than ever before.</p>
+                    
                 </div>
                 <div className="absolute flex justify-start transform -translate-y-1/2 w-2/5 left-24 top-3/4">
                     <button className="btn btn-warning mr-5">Reade more</button>

@@ -34,7 +34,10 @@ const Header = () => {
                 {menuItems}
             </ul>
             </div>
-            <Link to='/' className="btn btn-ghost normal-case text-xl">Doctors Portal</Link>
+            <Link to='/' className="btn btn-ghost normal-case text-xl">
+
+                <img className='w-1/2' src="https://i.ibb.co/1rpF6sk/garirbazar-logo-d17f0f834c519c43892bc76737d77dc1a1c7bb490853412992377a93677eb529.png" alt="" />
+            </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
             <ul className="menu menu-horizontal p-0">
