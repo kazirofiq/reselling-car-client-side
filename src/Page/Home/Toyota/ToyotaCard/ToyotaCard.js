@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ToyotaCard = ({toyotaCar}) => {
+const ToyotaCard = ({toyotaCar, setCarToyota}) => {
     const {_id, img, resellPrice, title, description, originalPrice, location, used, time} = toyotaCar;
     return (
         <div>
@@ -16,8 +16,13 @@ const ToyotaCard = ({toyotaCar}) => {
                 <p>Original Price: {originalPrice}</p>
                 <p>{time}</p>
                 <p>{description}</p>
-                <div className="card-actions">
-                <button className="btn btn-primary">Buy Now</button>
+                <div className="card-actions justify-center">
+                <label
+                    //  disabled={slots.length === 0}
+                     htmlFor="booking-modal" 
+                     className="btn btn-primary w-full uppercase text-white"
+                     onClick={() => setCarToyota(toyotaCar)}
+                     >Book now</label>
                 </div>
             </div>
             </div>

@@ -35,27 +35,30 @@ export const router = createBrowserRouter([
             path: '/blog',
             element: <Blog></Blog>
         },
-        
-      ]
-    },
-    {
-      path: '/dashboard',
-      element: <PrivateRoute><Category></Category></PrivateRoute>,
-      children: [
         {
           path: '/toyota',
-          element: <Toyota></Toyota>
+          element: <PrivateRoute><Toyota></Toyota></PrivateRoute>
       },
       {
           path: '/tesla',
-          element: <Tesla></Tesla>
+          element: <PrivateRoute><Tesla></Tesla></PrivateRoute>
       },
       {
           path: '/bmw',
-          element: <Bmw></Bmw>
+          element: <PrivateRoute><Bmw></Bmw></PrivateRoute>
       },
+        
+      ]
+      
+    },
+    {
+      path:'/category',
+      element: <Category></Category>,
+      children: [
+      
       ]
     },
+    
     {
       path:'*',
       element: 

@@ -1,15 +1,17 @@
 import React, { useEffect, useState } from 'react';
+import BookingModal from '../../Category/BookingModal/BookingModal';
 import ToyotaCard from './ToyotaCard/ToyotaCard';
 
 const Toyota = () => {
     const [toyotaCars, setToyotaCar] = useState([]);
+    // const [carToyota, setCarToyota] = useState(null);
     useEffect(() =>{
         fetch('toyota.json')
         .then(res => res.json())
         .then(data => setToyotaCar(data))
     }, [])
     return (
-        <div>
+        <section>
             
             <div className='text-center'>
             <h2 className='text-5xl font-bold '>Car toyota in Bangladesh</h2>
@@ -20,10 +22,16 @@ const Toyota = () => {
                     toyotaCars.map(toyotaCar => <ToyotaCard
                     key={toyotaCar._id}
                     toyotaCar={toyotaCar}
+                    // setCarToyota={setCarToyota}
                     ></ToyotaCard>)
                 }
             </div>
-        </div>
+            {
+                <BookingModal
+                // carToyota={carToyota}
+                ></BookingModal>
+            }
+        </section>
     );
 };
 

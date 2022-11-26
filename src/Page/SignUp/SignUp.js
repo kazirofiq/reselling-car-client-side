@@ -55,6 +55,7 @@ const handleSignUp = data =>{
         
 //     })
 // }
+
     return (
         <div className='h-[800px]  mx-auto flex justify-center items-center'>
             <div className='w-96 p-8'>

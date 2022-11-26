@@ -1,7 +1,7 @@
 import React from 'react';
 
-const BmwCard = ({bmwCar}) => {
-    const {_id, img, resellPrice, title, description, originalPrice, location, used, time} = bmwCar;
+const BmwCard = ({bmwCar, setCarBmwBooking}) => {
+    const { img, resellPrice, title, description, originalPrice, location, used, time} = bmwCar;
     return (
         <div>
             <div className="card w-96 bg-base-100 shadow-xl">
@@ -17,7 +17,12 @@ const BmwCard = ({bmwCar}) => {
                 <p>{time}</p>
                 <p>{description}</p>
                 <div className="card-actions">
-                <button className="btn btn-primary">Buy Now</button>
+                <label
+                    //  disabled={slots.length === 0}
+                     htmlFor="booking-modal" 
+                     className="btn btn-primary w-full uppercase text-white"
+                     onClick={() => setCarBmwBooking(bmwCar)}
+                     >Book now</label>
                 </div>
             </div>
             </div>

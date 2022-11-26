@@ -1,6 +1,6 @@
 import React from 'react';
 
-const TeslaCard = ({teslaCar}) => {
+const TeslaCard = ({teslaCar, setCarTesla}) => {
     const {_id, img, resellPrice, title, description, originalPrice, location, used, time} = teslaCar
     return (
         <div>
@@ -17,7 +17,12 @@ const TeslaCard = ({teslaCar}) => {
                 <p>{time}</p>
                 <p>{description}</p>
                 <div className="card-actions">
-                <button className="btn btn-primary">Buy Now</button>
+                <label
+                    //  disabled={slots.length === 0}
+                     htmlFor="booking-modal" 
+                     className="btn btn-primary w-full uppercase text-white"
+                     onClick={() => setCarTesla(teslaCar)}
+                     >Book now</label>
                 </div>
             </div>
             </div>

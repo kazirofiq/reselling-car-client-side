@@ -1,13 +1,19 @@
 import React, { useEffect, useState } from 'react';
+import BokkingModalBmw from '../../Category/BokkingModalBmw/BokkingModalBmw';
+import BookingModal from '../../Category/BookingModal/BookingModal';
 import BmwCard from './BmwCard/BmwCard';
 
 const Bmw = () => {
     const [bmwCars, setBmwCar] = useState([]);
+    
+    
+    const [carBmwBooking, setCarBmwBooking] = useState(null);
     useEffect(() =>{
-        fetch('toyota.json')
+        fetch('bmw.json')
         .then(res => res.json())
         .then(data => setBmwCar(data))
     }, [])
+    
     return (
         <div>
             
@@ -21,9 +27,17 @@ const Bmw = () => {
                     bmwCars.map(bmwCar => <BmwCard
                     key={bmwCar._id}
                     bmwCar={bmwCar}
+                    setCarBmwBooking={setCarBmwBooking}
                     ></BmwCard>)
                 }
             </div>
+            {
+                carBmwBooking &&
+                <BokkingModalBmw
+                    carBmwBooking={carBmwBooking}
+                    setCarBmwBooking={setCarBmwBooking}
+                ></BokkingModalBmw>
+            }
         </div>
     );
 };

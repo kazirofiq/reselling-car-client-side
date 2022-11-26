@@ -17,7 +17,7 @@ const Header = () => {
                 <li><Link to="/blog">Blog</Link></li>
                 { user?.uid ? 
                     <>
-                        <li><Link to="/dashboard">Dashboard</Link></li>
+                        <li><Link to="/category">Category</Link></li>
                         <li><button onClick={handleLogout}>Log Out</button></li>
                     </> 
                 : <li><Link to="/login">Login</Link></li>

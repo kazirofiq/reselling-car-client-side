@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from 'react';
+import BookingModal from '../../Category/BookingModal/BookingModal';
+import BookingModalTesla from '../../Category/BookingModalTesla/BookingModalTesla';
 import TeslaCard from './TeslaCard/TeslaCard';
 
 const Tesla = () => {
     const [teslaCars, setTeslaCar] = useState([]);
+    const [carTesla, setCarTesla] = useState(null);
     useEffect(() =>{
-        fetch('toyota.json')
+        fetch('tesla.json')
         .then(res => res.json())
         .then(data => setTeslaCar(data))
     }, [])
@@ -22,9 +25,16 @@ const Tesla = () => {
                     teslaCars.map(teslaCar => <TeslaCard
                     key={teslaCar._id}
                     teslaCar={teslaCar}
+                    setCarTesla={setCarTesla}
                     ></TeslaCard>)
                 }
             </div>
+            {
+                carTesla &&
+               <BookingModalTesla
+               carTesla={carTesla}
+               ></BookingModalTesla>
+            }
         </div>
     );
 };
