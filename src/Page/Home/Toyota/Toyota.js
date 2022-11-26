@@ -1,15 +1,23 @@
+import { useQuery } from '@tanstack/react-query';
 import React, { useEffect, useState } from 'react';
 import BookingModal from '../../Category/BookingModal/BookingModal';
 import ToyotaCard from './ToyotaCard/ToyotaCard';
 
 const Toyota = () => {
-    const [toyotaCars, setToyotaCar] = useState([]);
-    // const [carToyota, setCarToyota] = useState(null);
-    useEffect(() =>{
-        fetch('toyota.json')
+    // const [toyotaCars, setToyotaCar] = useState([]);
+    const [carToyota, setCarToyota] = useState(null);
+    
+    const {data:toyotaCars = []} = useQuery({
+        queryKey: ['toyota'],
+        queryFn:() => fetch('http://localhost:5000/toyota')
         .then(res => res.json())
-        .then(data => setToyotaCar(data))
-    }, [])
+    })    
+    
+    // useEffect(() =>{
+    //     fetch('http://localhost:5000/toyota')
+    //     .then(res => res.json())
+    //     .then(data => setToyotaCar(data))
+    // }, [])
     return (
         <section>
             
@@ -22,13 +30,14 @@ const Toyota = () => {
                     toyotaCars.map(toyotaCar => <ToyotaCard
                     key={toyotaCar._id}
                     toyotaCar={toyotaCar}
-                    // setCarToyota={setCarToyota}
+                    setCarToyota={setCarToyota}
                     ></ToyotaCard>)
                 }
             </div>
             {
+                carToyota &&
                 <BookingModal
-                // carToyota={carToyota}
+                carToyota={carToyota}
                 ></BookingModal>
             }
         </section>

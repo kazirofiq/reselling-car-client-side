@@ -1,16 +1,27 @@
+import { useQuery } from '@tanstack/react-query';
 import React, { useEffect, useState } from 'react';
 import BookingModal from '../../Category/BookingModal/BookingModal';
 import BookingModalTesla from '../../Category/BookingModalTesla/BookingModalTesla';
 import TeslaCard from './TeslaCard/TeslaCard';
 
 const Tesla = () => {
-    const [teslaCars, setTeslaCar] = useState([]);
+    // const [teslaCars, setTeslaCar] = useState([]);
     const [carTesla, setCarTesla] = useState(null);
-    useEffect(() =>{
-        fetch('tesla.json')
-        .then(res => res.json())
-        .then(data => setTeslaCar(data))
-    }, [])
+
+    const {data : teslaCars = []} = useQuery({
+        queryKey: ['tesla'],
+        queryFn: async() => {
+            const res = await fetch('http://localhost:5000/tesla');
+            const data = await res.json();
+            return data;
+        }
+    })
+
+    // useEffect(() =>{
+    //     fetch('http://localhost:5000/tesla')
+    //     .then(res => res.json())
+    //     .then(data => setTeslaCar(data))
+    // }, [])
     return (
         <div>
             

@@ -5,7 +5,7 @@ const ToyotaCard = ({toyotaCar, setCarToyota}) => {
     return (
         <div>
             <div className="card w-96 bg-base-100 shadow-xl">
-            <figure className="px-10 pt-10">
+            <figure className="px-10 w-full md:h-56 pt-10">
                 <img src={img} alt="Shoes" className="rounded-xl" />
             </figure>
             <div className="card-body items-center text-center">

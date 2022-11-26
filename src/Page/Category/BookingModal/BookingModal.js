@@ -1,7 +1,7 @@
 import React from 'react';
 
-const BookingModal = () => {
-    // const {title} = carToyota;
+const BookingModal = ({carToyota}) => {
+    const {title, resellPrice} = carToyota;
     return (
         <>
            
@@ -9,9 +9,9 @@ const BookingModal = () => {
                 <div className="modal">
                 <div className="modal-box relative">
                     <label htmlFor="booking-modal" className="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
-                    <h3 className="text-lg font-bold text-center">b</h3>
+                    <h3 className="text-lg font-bold text-center">{title}</h3>
                     <form >
-                    <input type="text"  className="input input-bordered my-2 w-full " />
+                    <input type="text" value={resellPrice} disabled className="input input-bordered my-2 w-full " />
                     <select name='slot' className="select select-bordered my-2 w-full">
                         
                         {/* {

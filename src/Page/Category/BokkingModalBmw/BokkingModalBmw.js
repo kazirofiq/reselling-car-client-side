@@ -1,7 +1,8 @@
 import React, { useContext, useEffect, useState } from 'react';
+import toast from 'react-hot-toast';
 import { AuthContext } from '../../../contexts/AuthProvider';
 
-const BokkingModalBmw = ({carBmwBooking, setCarBmwBooking}) => {
+const BokkingModalBmw = ({carBmwBooking, setCarBmwBooking, refetch}) => {
     
     const {title, resellPrice}= carBmwBooking;
 
@@ -24,8 +25,27 @@ const BokkingModalBmw = ({carBmwBooking, setCarBmwBooking}) => {
             resellPrice,
             price,
         }
-        console.log(booking);
-        setCarBmwBooking(null);
+        
+        fetch('http://localhost:5000/bmwbookings', {
+            method: 'POST',
+            headers: {
+                'content-type' : 'application/json'
+            },
+            body: JSON.stringify(booking)
+        })
+        .then(res => res.json())
+        .then(data =>{
+            if(data.acknowledged){
+                setCarBmwBooking(null);
+                toast.success('Booking Confirmed')
+                // refetch();
+            }
+            else{
+                toast.error(data.message);
+            }
+        })
+
+        
     }
     
     return (
