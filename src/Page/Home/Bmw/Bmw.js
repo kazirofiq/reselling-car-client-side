@@ -1,5 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
 import React, { useEffect, useState } from 'react';
+import Loading from '../../../Share/Loading/Loading';
 import BokkingModalBmw from '../../Category/BokkingModalBmw/BokkingModalBmw';
 import BookingModal from '../../Category/BookingModal/BookingModal';
 import BmwCard from './BmwCard/BmwCard';
@@ -8,11 +9,15 @@ const Bmw = () => {
     // const [bmwCars, setBmwCar] = useState([]);
     const [carBmwBooking, setCarBmwBooking] = useState(null);
 
-    const {data:bmwCars = []} = useQuery({
+    const {data:bmwCars = [], isLoading} = useQuery({
         queryKey: ['bmw'],
         queryFn:() => fetch('http://localhost:5000/bmw')
         .then(res => res.json())
     }) 
+
+    if(isLoading){
+        return <Loading></Loading>
+    }
 
     // useEffect(() =>{
     //     fetch('http://localhost:5000/bmw')
