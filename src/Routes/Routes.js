@@ -3,6 +3,7 @@ import DashboardLayout from "../layout/DashboardLayout";
 import Main from "../layout/Main";
 import Blog from "../Page/Blog/Blog";
 import Category from "../Page/Category/Category";
+import AllUser from "../Page/Dashboard/AllUsers/AllUsers";
 import Dashboard from "../Page/Dashboard/Dashboard";
 import MyOrders from "../Page/Dashboard/MyOrders/MyOrders";
 import Bmw from "../Page/Home/Bmw/Bmw";
@@ -11,6 +12,7 @@ import Tesla from "../Page/Home/Tesla/Tesla";
 import Toyota from "../Page/Home/Toyota/Toyota";
 import Login from "../Page/Login/Login";
 import SignUp from "../Page/SignUp/SignUp";
+import AdminRoute from "./AdminRoute/AdminRoute";
 import PrivateRoute from "./PrivateRoute/PrivateRoute";
 
 export const router = createBrowserRouter([
@@ -65,7 +67,11 @@ export const router = createBrowserRouter([
         {
           path: '/dashboard',
           element: <MyOrders></MyOrders>
-        }
+        },
+        {
+          path: '/dashboard/allusers',
+          element: <AdminRoute><AllUser></AllUser></AdminRoute>
+        },
       ]
     },
     
