@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { AuthContext } from '../../contexts/AuthProvider';
 import { useForm } from "react-hook-form";
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { json, Link, useLocation, useNavigate } from 'react-router-dom';
 import toast from 'react-hot-toast';
 import { GoogleAuthProvider } from 'firebase/auth';
 
@@ -35,8 +35,8 @@ const handleSignUp = data =>{
         }
         updateUser(userInfo)
         .then(() =>{
-            // saveUser(data.name, data.email);
-            navigate('/');
+            saveUser(data.name, data.email);
+            
             
         })
         .catch(err => console.log(err));
@@ -47,21 +47,22 @@ const handleSignUp = data =>{
     });
   }
 
-//   const saveUser = (name, email) =>{
-//     const user = {name, email};
-//     fetch('https://doctors-portal-server-sigma-three.vercel.app/users',{
-//         method: 'POST',
-//         headers: {
-//             'content-type' : 'application/json'
-//         },
-//         body: JSON.stringify(user)
-//     })
-//     .then(res => res.json())
-//     .then(data =>{
-//         setCreatedUserEmail(email);
+  const saveUser = (name, email) =>{
+    const user = {name, email};
+    fetch('http://localhost:5000/users',{
+        method: 'POST',
+        headers: {
+            'content-type' : 'application/json'
+        },
+        body: JSON.stringify(user)
+    })
+    .then(res => res.json())
+    .then(data =>{
+        getUserToken(email);
+       
         
-//     })
-// }
+    })
+}
 const handleGoogleSign = () =>{
         
     providerLogin(googleProvider)
@@ -96,6 +97,17 @@ const handleGoogleSign = () =>{
     })
     .catch(error => console.error(error))
 }
+
+    const getUserToken = email =>{
+        fetch(`http://localhost:5000/jwt?email=${email}`)
+        .then(res => res.json())
+        .then(data =>{
+            if(data.accessToken){
+                localStorage.setItem('accessToken', data.accessToken);
+                navigate('/');
+            }
+        })
+    }
     return (
         <div className='h-[800px]  mx-auto flex justify-center items-center'>
             <div className='w-96 p-8'>
