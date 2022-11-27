@@ -9,12 +9,12 @@ const Toyota = () => {
     
     const {data:toyotaCars = []} = useQuery({
         queryKey: ['toyota'],
-        queryFn:() => fetch('http://localhost:5000/toyota')
+        queryFn:() => fetch('https://car-server-kazirofiq.vercel.app/toyota')
         .then(res => res.json())
     })    
     
     // useEffect(() =>{
-    //     fetch('http://localhost:5000/toyota')
+    //     fetch('https://car-server-kazirofiq.vercel.app/toyota')
     //     .then(res => res.json())
     //     .then(data => setToyotaCar(data))
     // }, [])

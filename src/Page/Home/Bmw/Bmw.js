@@ -11,7 +11,7 @@ const Bmw = () => {
 
     const {data:bmwCars = [], isLoading} = useQuery({
         queryKey: ['bmw'],
-        queryFn:() => fetch('http://localhost:5000/bmw')
+        queryFn:() => fetch('https://car-server-kazirofiq.vercel.app/bmw')
         .then(res => res.json())
     }) 
 
@@ -20,7 +20,7 @@ const Bmw = () => {
     }
 
     // useEffect(() =>{
-    //     fetch('http://localhost:5000/bmw')
+    //     fetch('https://car-server-kazirofiq.vercel.app/bmw')
     //     .then(res => res.json())
     //     .then(data => setBmwCar(data))
     // }, [])

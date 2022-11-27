@@ -11,14 +11,14 @@ const Tesla = () => {
     const {data : teslaCars = []} = useQuery({
         queryKey: ['tesla'],
         queryFn: async() => {
-            const res = await fetch('http://localhost:5000/tesla');
+            const res = await fetch('https://car-server-kazirofiq.vercel.app/tesla');
             const data = await res.json();
             return data;
         }
     })
 
     // useEffect(() =>{
-    //     fetch('http://localhost:5000/tesla')
+    //     fetch('https://car-server-kazirofiq.vercel.app/tesla')
     //     .then(res => res.json())
     //     .then(data => setTeslaCar(data))
     // }, [])

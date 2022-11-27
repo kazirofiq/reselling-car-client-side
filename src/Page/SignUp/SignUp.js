@@ -50,7 +50,7 @@ const handleSignUp = data =>{
 
   const saveUser = (name, email) =>{
     const user = {name, email};
-    fetch('http://localhost:5000/users',{
+    fetch('https://car-server-kazirofiq.vercel.app/users',{
         method: 'POST',
         headers: {
             'content-type' : 'application/json'

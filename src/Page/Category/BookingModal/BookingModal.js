@@ -25,7 +25,7 @@ const BookingModal = ({carToyota, setCarToyota}) => {
             
         }
         
-        fetch('http://localhost:5000/bookings', {
+        fetch('https://car-server-kazirofiq.vercel.app/bookings', {
             method: 'POST',
             headers: {
                 'content-type' : 'application/json'
