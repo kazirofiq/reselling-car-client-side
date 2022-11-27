@@ -44,6 +44,7 @@ const Tesla = () => {
                 carTesla &&
                <BookingModalTesla
                carTesla={carTesla}
+               setCarTesla={setCarTesla}
                ></BookingModalTesla>
             }
         </div>

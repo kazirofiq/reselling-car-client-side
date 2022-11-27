@@ -38,6 +38,7 @@ const Toyota = () => {
                 carToyota &&
                 <BookingModal
                 carToyota={carToyota}
+                setCarToyota={setCarToyota}
                 ></BookingModal>
             }
         </section>
