@@ -12,7 +12,7 @@ const BookingModal = ({carToyota, setCarToyota}) => {
         const form = event.target;
         // const slot = form.slot.value;
         const name = form.name.value;
-        const price = form.price.value;
+        // const price = form.price.value;
         const email = form.email.value;
         const phone = form.phone.value;
         
@@ -22,10 +22,10 @@ const BookingModal = ({carToyota, setCarToyota}) => {
             email,
             phone,
             resellPrice,
-            price,
+            
         }
         
-        fetch('http://localhost:5000/bmwbookings', {
+        fetch('http://localhost:5000/bookings', {
             method: 'POST',
             headers: {
                 'content-type' : 'application/json'
