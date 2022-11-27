@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form";
 import { json, Link, useLocation, useNavigate } from 'react-router-dom';
 import toast from 'react-hot-toast';
 import { GoogleAuthProvider } from 'firebase/auth';
+import useToken from '../../hooks/useToken';
 
 const SignUp = () => {
     const {createUser, updateUser,providerLogin} = useContext(AuthContext);
@@ -13,15 +14,15 @@ const SignUp = () => {
     const [createdUserEmail, setCreatedUserEmail] = useState('')
 
     const googleProvider = new GoogleAuthProvider();
-    // const [token] = useToken(createdUserEmail);
+    const [token] = useToken(createdUserEmail);
     const navigate = useNavigate();
     const location = useLocation();
 
     const from = location.state?.from?.pathname || '/';
 
-    // if(token){
-    //     navigate('/');
-    // }
+    if(token){
+        navigate('/');
+    }
 
 const handleSignUp = data =>{
     setSignUoError();
@@ -58,7 +59,7 @@ const handleSignUp = data =>{
     })
     .then(res => res.json())
     .then(data =>{
-        getUserToken(email);
+        setCreatedUserEmail(email);
        
         
     })
@@ -78,36 +79,13 @@ const handleGoogleSign = () =>{
         console.log(currentUser);
         navigate(from, {replace: true});
 
-        // get jwt token
-    //     fetch('https://food-delevery-server-servoce.vercel.app/jwt', {
-    //         method: 'POST',
-    //         headers: {
-    //             'content-type': 'application/json'
-    //         },
-    //         body: JSON.stringify(currentUser)
-    //     })
-    //         .then(res => res.json())
-    //         .then(data => {
-    //             console.log(data);
-    //             // local storage is the easiest but not the best place to store jwt token
-    //             localStorage.setItem('genius-token', data.token);
-    //             navigate(from, { replace: true });
-    //         });
+       
         
     })
     .catch(error => console.error(error))
 }
 
-    const getUserToken = email =>{
-        fetch(`http://localhost:5000/jwt?email=${email}`)
-        .then(res => res.json())
-        .then(data =>{
-            if(data.accessToken){
-                localStorage.setItem('accessToken', data.accessToken);
-                navigate('/');
-            }
-        })
-    }
+   
     return (
         <div className='h-[800px]  mx-auto flex justify-center items-center'>
             <div className='w-96 p-8'>
