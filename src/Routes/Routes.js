@@ -4,6 +4,7 @@ import Main from "../layout/Main";
 import Blog from "../Page/Blog/Blog";
 import Category from "../Page/Category/Category";
 import Dashboard from "../Page/Dashboard/Dashboard";
+import MyOrders from "../Page/Dashboard/MyOrders/MyOrders";
 import Bmw from "../Page/Home/Bmw/Bmw";
 import Home from "../Page/Home/Home";
 import Tesla from "../Page/Home/Tesla/Tesla";
@@ -63,7 +64,7 @@ export const router = createBrowserRouter([
       children: [
         {
           path: '/dashboard',
-          element: <Dashboard></Dashboard>
+          element: <MyOrders></MyOrders>
         }
       ]
     },
