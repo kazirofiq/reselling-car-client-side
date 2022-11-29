@@ -5,10 +5,12 @@ import Footer from '../Share/Footer/Footer';
 import Header from '../Share/Header/Header/Header';
 import { AuthContext } from '../contexts/AuthProvider';
 import useAdmin from '../hooks/useAdmin';
+import useSeller from '../hooks/useSeller';
 
 const DashboardLayout = () => {
     const {user} = useContext(AuthContext);
     const [isAdmin] = useAdmin(user?.email)
+    const [isSeller] = useSeller(user?.email)
     return (
         <div>
         <Header></Header>
@@ -16,6 +18,7 @@ const DashboardLayout = () => {
             <input id="dashboard-drawer" type="checkbox" className="drawer-toggle" />
             <div className="drawer-content ">
                 <Outlet></Outlet>
+                
                 
             
             </div> 
@@ -29,8 +32,14 @@ const DashboardLayout = () => {
                       isAdmin &&  
                        <>
                             <li><Link to='/dashboard/allusers'>All users</Link></li>
-                            <li><Link to='/dashboard/adddoctor'>Add A product</Link></li>
-                            <li><Link to='/dashboard/managedoctors'>Manage Doctors</Link></li>
+                            <li><Link to='/dashboard/addproducts'>Add A product</Link></li>
+                            <li><Link to='/dashboard/myproducts'>My Products</Link></li>
+                        </>
+                    }
+                    {
+                        isSeller &&  
+                        <>
+                            <li><Link to='/dashboard/addproduct'>Add A product</Link></li>
                         </>
                     }
                 
@@ -38,7 +47,7 @@ const DashboardLayout = () => {
             
             </div>
         </div>
-        
+        <Footer></Footer>
     </div>
     );
 };
