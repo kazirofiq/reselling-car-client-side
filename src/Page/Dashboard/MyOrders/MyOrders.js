@@ -30,7 +30,7 @@ const MyOrders = () => {
         <th>Name</th>
         <th>Email</th>
         <th>Phone</th>
-        <th>LOcation</th>
+        <th>Model</th>
         <th>Price</th>
       </tr>
     </thead>
@@ -43,8 +43,7 @@ const MyOrders = () => {
                 <td>{booking.name}</td>
                 <td>{booking.email}</td>
                 <td>{booking.phone}</td>
-                <td></td>
-
+                <td>{booking.title}</td>
                 <td>{booking.resellPrice}</td>
                 <td>
                   {

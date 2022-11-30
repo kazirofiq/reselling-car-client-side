@@ -15,6 +15,8 @@ const BookingModalTesla = ({carTesla, setCarTesla}) => {
         // const price = form.price.value;
         const email = form.email.value;
         const phone = form.phone.value;
+        const title = form.title.value;
+        const price = form.title.value;
         
         
         const booking ={
@@ -22,6 +24,8 @@ const BookingModalTesla = ({carTesla, setCarTesla}) => {
             email,
             phone,
             resellPrice,
+            title,
+            price,
             
         }
         
@@ -55,7 +59,8 @@ const BookingModalTesla = ({carTesla, setCarTesla}) => {
                     <label htmlFor="booking-modal" className="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
                     <h3 className="text-lg font-bold text-center">{title}</h3>
                     <form onSubmit={handleBooking}>
-                    <input type="text" value={resellPrice} disabled className="input input-bordered my-2 w-full " />
+                    <input type="text" name='title' value={title} disabled className="input input-bordered my-2 w-full " />
+                    <input type="text" name='price' value={resellPrice} disabled className="input input-bordered my-2 w-full " />
                     
                     <input name='name' type="text"
                      defaultValue={user?.displayName} disabled 

@@ -17,6 +17,7 @@ import Toyota from "../Page/Home/Toyota/Toyota";
 import Login from "../Page/Login/Login";
 import SignUp from "../Page/SignUp/SignUp";
 import AdminRoute from "./AdminRoute/AdminRoute";
+import SellerRoute from "./AdminRoute/SellerRoute";
 
 import PrivateRoute from "./PrivateRoute/PrivateRoute";
 
@@ -79,7 +80,7 @@ export const router = createBrowserRouter([
         },
         {
           path: '/dashboard/addproducts',
-          element: <AddProduct></AddProduct>
+          element: <SellerRoute><AddProduct></AddProduct></SellerRoute>
         },
         {
           path: '/dashboard/myproducts',

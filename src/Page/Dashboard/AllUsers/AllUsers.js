@@ -28,6 +28,23 @@ const AllUsers = () => {
             }
         })
     }
+    const handleMakeSeller = id =>{
+        fetch(`https://car-server-kazirofiq.vercel.app/users/seller/${id}`, {
+            method: 'PUT',
+            headers: {
+                authorization: `bearer ${localStorage.getItem('accessToken')}`
+            }
+        })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data)
+            if(data.modifiedCount > 0){
+                toast.success('Make seller successful.')
+                refetch();
+            }
+        })
+    }
+   
     return (
         <div>
         <h2 className="text-3xl">All Users</h2>
@@ -39,6 +56,8 @@ const AllUsers = () => {
                     <th>Name</th>
                     <th>Email</th>
                     <th>Admin</th>
+                    <th>Seller</th>
+                    <th>Buyer</th>
                     <th>Delete</th>
                 </tr>
                 </thead>
@@ -54,6 +73,13 @@ const AllUsers = () => {
                                     <button onClick={() => handleMakeAdmin(user?._id)} className='btn btn-xs btn-primary'>Make Admin</button>}
                                     
                                     </td>
+                                <td>
+                                    { 
+                                    user?.role !== 'seller' && 
+                                    <button onClick={() => handleMakeSeller(user?._id)} className='btn btn-xs btn-primary'>Make Seller</button>}
+                                    
+                                    </td>
+                                
                                 <td><button className='btn btn-xs btn-danger'>Delete</button></td>
                             </tr>)
                         }

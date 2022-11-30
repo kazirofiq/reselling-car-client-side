@@ -7,10 +7,12 @@ import { AuthContext } from '../contexts/AuthProvider';
 import useAdmin from '../hooks/useAdmin';
 import useSeller from '../hooks/useSeller';
 
+
 const DashboardLayout = () => {
     const {user} = useContext(AuthContext);
     const [isAdmin] = useAdmin(user?.email)
     const [isSeller] = useSeller(user?.email)
+    
     return (
         <div>
         <Header></Header>
@@ -39,9 +41,10 @@ const DashboardLayout = () => {
                     {
                         isSeller &&  
                         <>
-                            <li><Link to='/dashboard/addproduct'>Add A product</Link></li>
+                            <li><Link to='/dashboard/addproducts'>Add A product</Link></li>
                         </>
                     }
+                   
                 
                 </ul>
             

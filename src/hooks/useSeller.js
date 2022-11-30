@@ -5,7 +5,7 @@ const useSeller = email =>{
     const [isSellerLoading, setIsSellerLoading] = useState(true);
     useEffect(() =>{
         if(email){
-            fetch(`https://car-server-kazirofiq.vercel.app/users/admin/${email}`)
+            fetch(`https://car-server-kazirofiq.vercel.app/users/seller/${email}`)
             .then(res => res.json())
             .then(data =>{
                 console.log(data)

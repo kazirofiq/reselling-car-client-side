@@ -1,7 +1,7 @@
 import React from 'react';
 
 const BmwCard = ({bmwCar, setCarBmwBooking}) => {
-    const { img, resellPrice, title, description, originalPrice, location, used, time} = bmwCar;
+    const { img, resellPrice, title, description, originalPrice, location, used, time, facility} = bmwCar;
     return (
         <div>
             <div className="card w-96 bg-base-100 shadow-xl">
@@ -9,6 +9,7 @@ const BmwCard = ({bmwCar, setCarBmwBooking}) => {
                 <img src={img} alt="Shoes" className="rounded-xl" />
             </figure>
             <div className="card-body items-center text-center">
+                <h2 className="card-title">{facility[0].name}</h2>
                 <h2 className="card-title">{title}</h2>
                 <p>{used}</p>
                 <p className='text-3xl'>Location: {location}</p>
